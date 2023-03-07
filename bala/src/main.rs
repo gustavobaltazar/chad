@@ -2,18 +2,13 @@ use rand::Rng;
 use std::{cmp::Ordering, io};
 
 fn main() {
-    let mut x: i32 = -50;
-    println!("Hello, world! {x}");
-    x = 10;
-    println!("Hello, world! {x}");
-
     let rng = rand::thread_rng().gen_range(0..100);
 
     let guessed_number = loop {
         let guess = match input("Type a number").parse::<i32>() {
             Ok(val) => val,
             Err(_) => {
-                println!("Coloque um número valido");
+                println!("Type a correct number!");
                 continue;
             }
         };
