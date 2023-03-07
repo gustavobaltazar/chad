@@ -25,7 +25,6 @@ fn main() {
                 break guess;
             }
         }
-
     };
     println!("The random number it was {}", guessed_number)
 }
